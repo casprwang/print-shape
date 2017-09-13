@@ -1,0 +1,49 @@
+const firstTouch = () => 2
+
+const shape = {
+  middle: '-',
+  leftSlope: '/',
+  rightSlope: '\\',
+  vertical: '|',
+}
+
+const triangle = (lines) => {
+  for (let i =0; i<lines; i+=1) {
+    if (i !==lines-1)
+      console.log(' '.repeat(lines-i-1)+ shape.leftSlope + ' '.repeat(i*2) + shape.rightSlope)
+    else 
+      console.log(' '.repeat(lines-i-1)+ shape.leftSlope + '-'.repeat(i*2) + shape.rightSlope)
+  }
+}
+
+// triangle(29)
+// triangle(1)
+
+const square = (lines) => {
+  console.log(shape.vertical + shape.middle.repeat(lines) + shape.vertical)
+  for (let i =0; i<lines-2; i++) {
+    console.log(shape.vertical + ' '.repeat(lines) + shape.vertical)
+  }
+  console.log(shape.vertical + shape.middle.repeat(lines) + shape.vertical)
+}
+
+// square(8)
+
+const rhombus = (lines) => {
+  for (let i = 0; i< lines /2 ; i++) {
+    if (i===0) console.log(' '.repeat(lines/2 -i-1) + shape.leftSlope + '-'.repeat(2*i +1) + shape.rightSlope)
+    else console.log(' '.repeat(lines/2 -i-1) + shape.leftSlope + ' '.repeat(2*i+1) + shape.rightSlope)
+  }
+  for (let i = lines/2-1; i>=0; i--) {
+    if (i===0) console.log(' '.repeat(lines/2 -i-1) + shape.rightSlope + '-'.repeat(2*i +1) + shape.leftSlope)
+    else console.log(' '.repeat(lines/2 -i-1) + shape.rightSlope + ' '.repeat(2*i+1) + shape.leftSlope)
+  }
+}
+
+
+rhombus(6)
+
+module.exports = {
+  firstTouch,
+  triangle
+}
