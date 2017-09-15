@@ -40,6 +40,12 @@ in terminal
 ```
 
 ## API
-### .triangle(num: number): null (no return just log the shape in terminal)
-### .square(num: number(>1)): null (no return just log the shape in terminal)
-### .rhombus(num: number(even)): null (no return just log the shape in terminal)
+```
+.triangle(num: number): null (no return just log the shape in terminal)
+```
+```
+.square(num: number(>1)): null (no return just log the shape in terminal)
+```
+```
+.rhombus(num: number(even)): null (no return just log the shape in terminal)
+```
