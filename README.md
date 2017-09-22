@@ -46,3 +46,7 @@ no return just log the shape in terminal
 no return just log the shape in terminal
 ### .rhombus(num: number(even)): null 
 no return just log the shape in terminal
+
+## License
+MIT © [Song Wang](https://songwang.io)
+
